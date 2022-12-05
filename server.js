@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
+const cors = require('cors')
 
 //Define ROute Const
 const Auth = require('./routes/api/auth');
@@ -11,9 +12,14 @@ const app = express();
 
 //Middleware
 app.use(express.json({ extended: false }));
+const corsOptions = {
+  origin: 'http://localhost:3000',
+};
+app.use(cors(corsOptions));
 
 //Connect Database
 connectDB();
+
 
 app.get('/', (req, res) => {
   res.send('API Running');

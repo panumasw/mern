@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb://127.0.0.1/mern",
+  "mongoURI": "mongodb+srv://panumasw:Peplin63@accounts.h8ykpnv.mongodb.net/?retryWrites=true&w=majority",
   "jwtSecret": "panumaswSecret"
 }
